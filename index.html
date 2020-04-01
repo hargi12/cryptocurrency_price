@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pricing API Consumption</title>
+	<link rel="stylesheet" type="text/css" href="foundation.min.css">
+</head>
+<body>
+	<div class="container" id="app">
+		<h3 class="text-center">Cryptocurrency Pricing</h3>
+		<div class="columns medium-4" v-for='result,index in results'>
+			<div class="card">
+				<div class="card-section">
+					<p> {{ index }} </p>			
+				</div>
+				<div class="card-divider">
+					<p> $ {{ result.USD }} </p>
+				</div>
+
+				<div class="card-section">
+					<p> &#8364; {{ result.EUR }} </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/vueApp.js"></script>
+</body>
+</html>
